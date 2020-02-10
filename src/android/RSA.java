@@ -47,6 +47,7 @@ public class RSA extends AbstractRSA {
                 .setAlgorithmParameterSpec(new RSAKeyGenParameterSpec(2048, RSAKeyGenParameterSpec.F4))
                 .setUserAuthenticationRequired(true)
                 .setUserAuthenticationValidityDurationSeconds(userAuthenticationValidityDuration)
+                .setInvalidatedByBiometricEnrollment(false)
                 .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_RSA_PKCS1)
                 .setBlockModes(KeyProperties.BLOCK_MODE_ECB)
                 .build();
